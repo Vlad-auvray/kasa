@@ -57,7 +57,7 @@
     position: relative;
     @include flex-center;
     width: 100%;
-    @include bkgrd($banner-background);
+    @include background($banner-background);
     margin-top: 20px;
 }
 

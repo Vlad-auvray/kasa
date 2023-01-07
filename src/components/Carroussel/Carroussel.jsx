@@ -1,3 +1,4 @@
+import React from 'react';
 import { useState } from "react";
 import left from "../../images/left.svg";
 import right from "../../images/right.svg";
