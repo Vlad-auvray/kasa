@@ -30,7 +30,7 @@ export default function Collapse(props) {
 			</div>
 			<div
 				ref={refHeight}
-				className={toggle ? "collapse__toggle animated" : "collapse__toggle"}
+				className={toggle ? "collapse__toggle anim" : "collapse__toggle"}
 				style={{ height: toggle ? `${heightEl}` : "0px" }}
 			>
 				<p aria-hidden={toggle ? "true" : "false"}>{props.aboutText}</p>

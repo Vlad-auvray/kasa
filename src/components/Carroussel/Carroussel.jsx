@@ -3,19 +3,19 @@ import { useState } from "react";
 import left from "../../images/left.svg";
 import right from "../../images/right.svg";
 
-export default function Carrousel({ slides }) {
+export default function Carroussel({ slides }) {
 	const [current, setCurrent] = useState(0); 
 	const length = slides.length;
 
 	const nextSlide = () => {
-		setCurrent(current === length - 1 ? 0 : current + 1); // on repart au premier slide quand on arrive au dernier
+		setCurrent(current === length - 1 ? 0 : current + 1); 
 	};
 	const prevSlide = () => {
-		setCurrent(current === 0 ? length - 1 : current - 1); // on repart au dernier slide quand on est au premier
+		setCurrent(current === 0 ? length - 1 : current - 1); 
 	};
 
 	return (
-		<section id="carrousel-container">
+		<section id ="carroussel-block">
 			{length > 1 && (
 				<img
 					src={left} 
@@ -37,8 +37,8 @@ export default function Carrousel({ slides }) {
 					key={index} 
 					className={
 						current === index
-							? "slider bl-msk wh-msk active-anim"
-							: "slider bl-msk wh-msk"
+							? "slider blend-mask width-mask active-anim"
+							: "slider blend-mask width-mask"
 					}
 				>
 					{index === current && <img src={slide} alt="appartement à louer" />}

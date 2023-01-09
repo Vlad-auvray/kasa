@@ -10,13 +10,13 @@ export default function Home() {
 	const [data, setData] = useState([]);
 
 	useEffect(() => {
-		axios.get("../../data/logements.json").then((res) => setData(res.data)); 
+		axios.get("/logements.json").then((res) => setData(res.data)); 
 	}, []);
 
 	return (
 		<>
 			<Banner />
-			<div className="cards-container">
+			<div className="cards-block">
 				{data.map((appart, id) => (
 					<div className="card_logement" key={id}>
 						<Link className="link_card_logement" to={`/logement/${appart.id}`}>

@@ -12,20 +12,20 @@ export default function Logement() {
 	const params = useParams();
 	const navigate = useNavigate();
 
-	const [selectedAppart, setselectedAppart] = useState();
+	const [selectedAppart, setSelectedAppart] = useState();
 	useEffect(() => {
 		const getData = async () => {
-			const res = await axios.get("../../data/logements.json"); 
-			const selected = res.data.find(({ id }) => id === params.id);
-			res.data.map(() => setselectedAppart(selected));
+			const res = await axios.get("/logements.json"); 
+			const selected = res.data.find(({id}) => id === params.id);
+			res.data.map(() => setSelectedAppart(selected));
 			if (selected === undefined) {
 				navigate("/404", { state: { message: "Aucune donnée trouvée." } }); 
 			}
 		};
 		getData();
-		
-	}, ); 
-	const slidePics = selectedAppart && selectedAppart.pictures;
+		// eslint-disable-next-line
+	}, []); 
+	const slideImg = selectedAppart && selectedAppart.pictures;
 	const tags = selectedAppart && selectedAppart.tags;
 	const equipments = selectedAppart && selectedAppart.equipments;
 	const equip =
@@ -37,33 +37,33 @@ export default function Logement() {
 		));
 	return (
 		selectedAppart && (
-			<div key={params.id} className="fiche-container">
-				<Carroussel slides={slidePics} />
-				<section className="hostInfo-container">
-					<div className="title-tags-container">
-						<div className="title-container redFont">
+			<div key={params.id} className="fiche-block">
+				<Carroussel slides={slideImg} />
+				<section className="hostInfo-block">
+					<div className="title-tags-block">
+						<div className="title-block redFont">
 							<h1>{selectedAppart.title}</h1>
 							<h3>{selectedAppart.location}</h3>
 						</div>
-						<div className="tags-container">
+						<div className="tags-block">
 							{tags.map((tag) => (
 								<Tag key={tag} tag={tag} />
 							))}
 						</div>
 					</div>
-					<div className="rate-host-container">
-						<div className="host-container redFont">
+					<div className="rate-host-block">
+						<div className="host-block redFont">
 							<Host
 								hostName={selectedAppart.host.name}
 								hostPic={selectedAppart.host.picture}
 							/>
 						</div>
-						<div className="rate-container">
+						<div className="note-block">
 							<Note score={selectedAppart.rating} />
 						</div>
 					</div>
 				</section>
-				<div className="collapse-fiche-container">
+				<div className="collapse-fiche-block">
 					<Collapse
 						aboutTitle="Description"
 						aboutText={selectedAppart.description}

@@ -1,11 +1,14 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import logo from "../../images/logo.svg";
 
 export default function Footer() {
 	return (
-		<footer className="foot-container">
+		<footer className="footer-block">
+			<Link to="/" className="toHome" >
 			<img src={logo} alt="logo Kasa" />
-			<p className="foot-container__text">© 2020 Kasa. All rights reserved</p>
+			</Link>
+			<p className="footer-block__text">© 2020 Kasa. All rights reserved</p>
 		</footer>
 	);
 }

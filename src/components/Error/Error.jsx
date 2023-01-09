@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function Error() {
 	return (
-		<div className="errorContainer">
+		<div className="errorBlock">
 			<p className="errorNumber">404</p>
 			<p className="errorText">Oups! La page que vous demandez n'existe pas.</p>
 			<Link to="/" className="errorLinkHome">

@@ -27,23 +27,23 @@ main {
 	color: $primary-color;
 }
 
-.fiche-container {
+.fiche-block {
 	@include flex-center;
 	flex-direction: column;
 }
 
-.title-container {
+.title-block {
 	display: flex;
 	flex-direction: column;
 }
 
-.bl-msk {
+.blend-mask {
 	background: $background-color;
 	mix-blend-mode: darken;
 	@include big-radius;
 }
 
-.wh-msk {
+.width-mask {
 	background: $secondary-color;
 	@include small-radius;
 

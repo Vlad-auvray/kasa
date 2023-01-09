@@ -1,4 +1,4 @@
-.banner-container {
+.banner-block {
 	height: 111px;
 	@include small-radius;
 	@include flex-banner;
@@ -29,7 +29,7 @@
 		left: 0;
 		right: 0;
 		@include flex-center;
-		@include WH-full;
+		@include fullsize;
 		@include font(48px, 500);
 		@include big-radius;
 	}

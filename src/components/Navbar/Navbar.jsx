@@ -8,7 +8,7 @@ export default function Navbar() {
 				Accueil
 			</Link>
 			<Link to="/about" className="navbar-header_link-about">
-				A Propos
+				À Propos
 			</Link>
 		</nav>
 	);

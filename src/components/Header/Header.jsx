@@ -5,8 +5,8 @@ import Navbar from "../Navbar/Navbar";
 
 export default function Header() {
 	return (
-		<header className="headerWrap">
-			<figure className="headerWrap__fig">
+		<header className="headerBlock">
+			<figure className="headerBlock__fig">
 				<Link to="/" className="toHome" > 
                 <img className="logo" src={logo} alt="logo Kasa" />
                  </Link>

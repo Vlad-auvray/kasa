@@ -1,4 +1,4 @@
-.host-comp {
+.host-compo {
 	@include flex-end;
 	width: 100%;
 }
@@ -17,7 +17,7 @@
 	}
 
 	& img {
-		@include WH-full;
+		@include fullsize;
 		border-radius: 50%;
 		object-fit: cover;
 	}
@@ -36,7 +36,7 @@
 	}
 }
 
-.rate-host-container {
+.rate-host-block {
 	display: flex;
 	flex-direction: row-reverse;
 	justify-content: space-between;
@@ -47,7 +47,7 @@
 	}
 }
 
-.hostInfo-container {
+.hostInfo-block {
 	display: flex;
 	flex-direction: column;
 	width: 100%;

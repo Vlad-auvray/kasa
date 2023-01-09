@@ -1,4 +1,4 @@
-#carrousel-container {
+#carroussel-block {
     display: flex;
     position: relative;
     width: 100%;
@@ -12,7 +12,7 @@
 }
 
 .slider {
-    @include WH-full;
+    @include fullsize;
     position: absolute;
     left: 0%;
     right: 0%;
@@ -20,14 +20,13 @@
     bottom: 0%;
     @include small-radius;
     opacity: 0;
-    transition: opacity ease-in-out 0.6s;  //petit effet d'apparition progressive de l'image dans le slide
-
+    transition: opacity ease-in-out 0.6s;  
     @media screen and (min-width: $breakpoint-desktop) {
         @include big-radius;
     }
 
     & img {
-        @include WH-full;
+        @include fullsize;
         object-fit: cover;
         position: absolute;
         left: 0%;
@@ -55,3 +54,24 @@
         }
     }
 }
+
+.active-anim {
+    opacity: 1;
+}
+
+.leftArrow {
+    @include leftArrow-style;
+    &:hover,
+    &:focus {
+        @include darken;
+    }
+}
+
+.rightArrow {
+    @include rightArrow-style;
+    &:hover,
+    &:focus {
+        @include darken;
+    }
+}
+
