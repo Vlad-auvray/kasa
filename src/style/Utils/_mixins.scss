@@ -1,7 +1,7 @@
 @mixin body-position {
     max-width: $widthmax;
     min-width: $widthmin;
-    margin: auto;
+    margin: 0;
 }
 
 

@@ -31,7 +31,7 @@ export default function Logement() {
 	const equip =
 		selectedAppart &&
 		equipments.map((item, index) => (
-			<li key={index} className="equipList">
+			<li key={index} className="equipementList">
 				{item}
 			</li>
 		));

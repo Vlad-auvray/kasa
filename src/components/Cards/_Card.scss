@@ -54,7 +54,7 @@
     width: 100%;
     gap: 20px;
     @include small-radius;
-    margin: 22px 0;
+    padding: 22px 0;
     flex-wrap: wrap;
 
     @media screen and (min-width: $breakpoint-desktop) {
